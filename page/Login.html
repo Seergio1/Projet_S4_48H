@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="forms-container">
 		  <div class="signin-signup">
-			<form id="demo-form_1" action="#" class="sign-in-form" data-parsley-validate="">
+			<form id="demo-form_1"  class="sign-in-form" data-parsley-validate="">
 			  <h2 class="title">Sign in</h2>
 			  <div class="input-field">
 				<i class="fas fa-user"></i>
@@ -23,10 +23,10 @@
 				<i class="fas fa-lock"></i>
 				<input type="password" placeholder="Password" class="form-control" data-parsley-minlength="20"  data-parsley-minlength-message="Mot de passe trop court!" required=""/>
 			  </div>
-			  <input type="submit" value="Login" class="btn solid" />
+			  <input id="btn_log_front_office" type="submit" value="Login" class="btn solid" />
 			  
 			</form>
-			<form id="demo-form_2" action="#" class="sign-up-form">
+			<form id="demo-form_2"  class="sign-up-form" data-parsley-validate="">
 			  <h2 class="title">Sign up</h2>
 			  <div class="input-field">
 				<i class="fas fa-user"></i>
@@ -44,7 +44,7 @@
 				<i class="fas fa-calendar"></i>
 				<input type="date" placeholder="Date de naissance" class="form-control" data-parsley-date data-parsley-error-message="Veuillez entrer une date valide." required=""/>
 			  </div>
-			  <input type="submit" class="btn" value="Sign up" />
+			  <input id="btn_inscri_front_office" type="submit" class="btn" value="Sign up" />
 			  
 			  
 			</form>
@@ -100,5 +100,7 @@
 			});
 		</script>
     <script type="text/javascript" src="../assets/js/Login.js"></script>
+	<script src="../assets/js/traitement_login.js"></script>
+	<script src="../assets/sweetalert2/dist/sweetalert2.all.js"></script>
 </body>
 </html>
