@@ -1,0 +1,107 @@
+.box_facture{
+    width: 100%;
+    /* background-color: red; */
+}
+
+/* facture_nav_bar */
+.facture_nav_bar{
+    display: flex;
+    /* background-color: red; */
+    justify-content: flex-end;
+}
+.facture_nav_item{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    background-color: var(--theme-principale);
+    border-radius: 10px;
+}
+.facture_nav_item i{
+    color: white;
+}
+/* info bis */
+.box_info_facture_bis{
+    width: 100%;
+    display:flex ;
+    padding: 0.5%;
+}
+.box_num_facture,.box_date_facture{
+    display: flex;
+    width: 50%;
+    font-weight: bold;
+}
+.data_num_facture,.data_date{
+    margin:0 1%;
+    font-weight: initial;
+}
+/* facture_content */
+.table_facture,
+.facture_content{
+    width: 95%;
+    margin: 10px auto;
+    /* background-color: red; */
+}
+.box_facture_info{
+    display: flex;
+    flex-direction: column;
+}
+.facture_box_2,
+.facture_box_3,
+.facture_box_1{
+    display: inline-flex;
+    width: 100%;
+    flex-wrap: wrap;
+    /* background-color: red; */
+}
+.facture_info_item_customer,.facture_info_item_company{
+    margin: 2% 5%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    border-radius: 10px;
+}
+.box_total,
+.facture_info_item_customer{
+    width: 300px;
+}
+.box_note,
+.facture_info_item_company{
+    width: 500px;
+}
+.titre_facture_{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color:white;
+    font-size: 20px;
+    padding: 1%;
+    background-color: var(--theme-principale);
+    margin: 10px 0;
+}
+.facture_sous_item{
+    display: flex;
+    padding: 2%;
+}
+.facture_info_label,.facture_info_text{
+    padding:0 2%;
+}
+.facture_info_label{
+    font-weight: bold;
+}
+.box_total,.box_note{
+    margin: 2% 5%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    border-radius: 10px;
+}
+.note,.total{
+    display: flex;
+    flex-direction: column;
+}
+.total .facture_info_text{
+    font-size: 30px;
+    font-weight: bold;
+}
+.total{
+    justify-content: center;
+    align-items: center;
+}
