@@ -11,15 +11,17 @@
 <body>
     <script src="<?php echo base_url() ."assets/js/jquery-3.7.0.js";?>"></script>
 	<script src="<?php echo base_url() ."assets/js/parsley.min.js";?>"></script>
-
+    <p id="url" value="<?php echo base_url(); ?>"></p>
     <div class="box_profil">
         
             <div class="etape e1 active">
                 <div class="etape_titre">Bienvenue</div>
                 <div class="etape_sous_titre">Alors, qu'est-ce qui vous amène ici ?</div>
-                <div value="1" class="etape_item">Perdre du poids</div>
-                <div value="2" class="etape_item">Augmenter son poids</div>
-                <div value="3" class="etape_item">Manger plus sainement sans perdre de poids</div>
+                <?php
+                foreach ($objectifs as $objectif) {
+                ?>
+                <div value="<?php echo $objectif['idobjectif']; ?>" class="etape_item"><?php echo $objectif['libele']; ?></div>
+                <?php } ?>
                 <button name="suivant1" id="button_next" onclick="suivant(0)">Suivant</button>
             </div>
     
@@ -38,8 +40,8 @@
                 <div class="box_all_genre">
                     <div class="label">Quel est votre genre ?</div>
                     <div class="box_genre">
-                        <div value="m">Masculin</div>
-                        <div value="f">Féminin</div>
+                        <div value="1">Masculin</div>
+                        <div value="2">Féminin</div>
                     </div>
                 </div>
                
@@ -78,11 +80,12 @@
                     
                 </div>
                 <div class="etape_sous_titre">Avez-vous des réstrication alimentaire ?</div>
-                <div value="1" class="etape_item">Végétarien</div>
-                <div value="2" class="etape_item">Intolérence au lactose</div>
-                <div value="3" class="etape_item">Gluten</div>
-                <div value="4" class="etape_item">Fruits de mer</div>
-                <div value="5" class="etape_item">Aucune</div>
+                <?php
+                foreach ($restrictions as $restriction) {
+                ?>
+                <div value="<?php echo $restriction['idallergie']; ?>" class="etape_item"><?php echo $restriction['libele']; ?></div>
+                <?php } ?>
+                <div value="<?php echo $restrictions[count($restrictions)-1]['idallergie']+1; ?>" class="etape_item aucun">Aucune</div>
                 <div class="all_boutons">
                     <button name="precedent3" id="button_next" onclick="precedent(2)">Précédent</button>
                     <button name="suivant3" id="button_next" onclick="suivant(2)">Suivant</button>
@@ -102,11 +105,12 @@
                     
                 </div>
                 <div class="etape_sous_titre">Etes-vous atteint de maladie(s) ?</div>
-                <div value="1" class="etape_item">Diabète</div>
-                <div value="2" class="etape_item">Tensionnaire</div>
-                <div value="3" class="etape_item">Maladie cardiaque</div>
-                <div value="4" class="etape_item">Maladie rénale</div>
-                <div value="5" class="etape_item">Aucune</div>
+                <?php
+                foreach ($maladies as $maladie) {
+                ?>
+                <div value="<?php echo $maladie['idmaladie']; ?>" class="etape_item"><?php echo $maladie['libele']; ?></div>
+                <?php } ?>
+                <div value="<?php echo $maladies[count($maladie)-1]['idmaladie']+1; ?>" class="etape_item aucun2">Aucune</div>
                 <div class="all_boutons">
                     <button name="precedent4" id="button_next" onclick="precedent(3)">Précédent</button>
                     <button name="suivant4" id="button_next" onclick="suivant(3)">Suivant</button>

@@ -5,6 +5,8 @@
     class Fonction_model extends CI_Model{
 
         public function verifierInscription($mail,$motpasse,$daty){
+            date_default_timezone_set('Europe/Paris');
+
             $result = $this->check($mail,$motpasse);
             if($result!=-1){
                 return "Existant";
@@ -29,11 +31,11 @@
 
 
         public function insererPersonne($taille,$genre){
-            if($taille<120){
+            if($taille<150){
                 return "taille trop petit";
             }
 
-            if($genre!= 'f' || $genre!='m'){
+            if($genre!= 1 && $genre!=2){
                 return "erreur sur le genre";
             }
             $req = "INSERT INTO personne VALUES(default,%s,'%s')";
@@ -66,7 +68,7 @@
         public function getLastIdTable($table){
             $req = "SELECT id%s FROM %s ORDER BY id%s DESC LIMIT 1";
             $requete = sprintf($req,$table,$table,$table);
-            $resultat = $this->db->query($req);
+            $resultat = $this->db->query($requete);
             $id = $resultat->row_array();
             return $id['id'.$table];
         }
@@ -102,9 +104,9 @@
             return 1;
         }
 
-        public function insertPrevision($idPersonne,$idObjectif,$poidsIdeal,$hab,$vitesse,$nbmanger){
-            $req = "INSERT INTO prevision VALUES(default,%s,%s,%s,%s,%s,%s,NOW())";
-            $fin = sprintf($req,$idPersonne,$idObjectif,$poidsIdeal,$hab,$vitesse,$nbmanger);
+        public function insertPrevision($idPersonne,$idObjectif,$poidsIdeal,$hab,$vitesse,$nbmanger,$argent){
+            $req = "INSERT INTO prevision VALUES(default,%s,%s,%s,%s,%s,%s,'%s',NOW())";
+            $fin = sprintf($req,$idPersonne,$idObjectif,$poidsIdeal,$hab,$vitesse,$nbmanger,$argent);
             $this->db->query($fin);
             return 1;
         }
@@ -112,7 +114,7 @@
             $req = "SELECT * FROM utilisateur WHERE mail = '%s' AND motpasse = '%s'";
             $requete = sprintf($req,$mail,$pass);
             $resultat = $this->db->query($requete);
-            if($resultat == null){
+            if(count($resultat->row_array()) == 0){
                 return -1;
             }
             return $resultat->row_array();
@@ -122,6 +124,37 @@
             $req = "SELECT * FROM ".$table;
             $resultat = $this->db->query($req);
             return $resultat->result_array();
+         }
+
+         public function getData($page){
+            $data = array(array());
+            // page profil
+            $data['profil']['objectifs'] = $this->getObject('objectif');
+            $data['profil']['restrictions'] = $this->getObject('allergie');
+            $data['profil']['maladies'] = $this->getObject('maladie');
+
+            return $data[$page];
+         }
+
+         public function getDatas($page){
+            $data = array(array());
+            // page profil
+            $data['profil']['objectifs'] = $this->getObject('objectif');
+            $data['profil']['restrictions'] = $this->getObject('allergie');
+            $data['profil']['maladies'] = $this->getObject('maladie');
+            $data['box_card']['regimes'] = $this->getObject('regime');
+            $data['box_facture']['maladies'] = $this->getObject('maladie');
+            $data['info_user']['maladies'] = $this->getObject('maladie');
+            $data['porte_monnaie']['maladies'] = $this->getObject('maladie');
+            $donne = array();
+            $donne['page'] = $page;
+            $donne['data'] = $data[$page];
+            return $donne;
+         }
+
+
+         public function genererRegime($iduser){
+
          }
 
 }

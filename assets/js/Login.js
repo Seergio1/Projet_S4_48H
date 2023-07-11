@@ -5,7 +5,7 @@ var base = document.getElementById("url").getAttribute("value");
 
 
 function toAccueil(){
-  window.location = `${base}MyController/Monsite`;
+  window.location = `${base}MyController/liens/box_card`;
 }
 
 form_sign_in.addEventListener("submit",(e) =>{
@@ -20,10 +20,11 @@ boutton.addEventListener("click",() =>{
 });
 
 
+
 function login(){
   let formdata = new FormData(form_sign_in);
   let xhr = getTheBoy();
-  xhr.onreadystatechange = function () {  
+  xhr.onreadystatechange = function (){
       if (xhr.readyState == 4) {
          if (xhr.status == 200) {
               let retour = JSON.parse(xhr.responseText);

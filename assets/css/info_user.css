@@ -1,0 +1,132 @@
+.box_info_personnelle{
+    /* background-color: red; */
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 5% auto;
+}
+.info_user,
+.info_sante,
+.objectif{
+    position: relative;
+    min-width: 380px;
+    margin:5px auto;
+    display: flex;
+    flex-direction: column;
+    
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.8s ease;
+}
+
+.titre_perso{
+    color: var(--theme-secondaire);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 2%;
+}
+.info_item{
+    display: flex;
+    width: 100%;
+    padding: 5%;
+}
+.label,.data{
+    display: flex;
+    padding: 1%;
+    font-size: 15px;
+}
+.label{
+    font-weight: bold;
+    width: 50%;
+}
+.data{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+  .info_sante::before{
+    content: "Santé";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:var(--theme-secondaire);
+    transition: transform 0.7s ease-in-out;
+    z-index: 1;
+    transform: scaleX(1);
+    transform-origin: center ;
+    border-radius: 10px;
+    color: white;
+    font-size: 50px;
+  }
+  .info_user::before{
+    content: "Personnelle";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:var(--theme-secondaire);
+    transition: transform 0.7s ease-in-out;
+    z-index: 1;
+    transform: scaleX(1);
+    transform-origin: center ;
+    border-radius: 10px;
+    color: white;
+    font-size: 50px;
+  }
+  .objectif::before {
+    content: "Objectif";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:var(--theme-secondaire);
+    transition: transform 0.7s ease-in-out;
+    z-index: 1;
+    transform: scaleX(1);
+    transform-origin: center ;
+    border-radius: 10px;
+    color: white;
+    font-size: 50px;
+  }
+  .info_sante:hover::before,
+  .objectif:hover::before,
+  .info_user:hover::before {
+    transform: scale(0.0);
+  }
+  .modif_perso{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5%;
+  }
+  .modif_perso i:hover{
+    color: var(--theme-secondaire);
+    cursor: pointer;
+  }
+  #btn_modif_poids{
+    border: 1px solid var(--theme-secondaire);
+    color: var(--theme-secondaire);
+    background-color: white;
+    transition: 0.7s ease-in-out;
+    width: 50%;
+    border-radius: 10px;
+  }
+  #btn_modif_poids:hover{
+    cursor: pointer;
+    background-color: var(--theme-secondaire);
+    color: white;
+  }

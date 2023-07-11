@@ -1,0 +1,104 @@
+.all-forms{
+    display:flex;
+    width:100%;
+    gap:1%;
+    background: white;
+    height:90vh;
+    /* flex-wrap: wrap; */
+}
+.left-item{
+    width:66%;
+    display:flex;
+    flex-direction:column;
+}
+.right-item{
+    width:33%;
+    display:flex;
+    flex-direction:column;
+}
+.forms-item{
+    margin:2%;
+    padding:2%;
+    background-color:#cccccc;
+    border-radius:5px;
+}
+.mytable2{
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+}
+.mytable2 .mythead{
+	display: flex;
+	padding: 2%;
+	gap: 11%;
+}
+.d{
+    display:flex;
+    gap:70%;
+}
+.d button{
+    padding:0.5% 1%;
+    border-radius:5px;
+    border:none;
+    background: #c0a0c0;
+    color:white;
+}
+.mytable2 .mybody1 .body-item{
+	display: flex;
+	padding: 2% 2%;
+	gap: 2%;
+	margin-bottom: 1%;
+	border-radius: 5px;
+	background-color:white;
+}
+.mytable2 .mybody1 .body-item .b-item{
+	/* display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center; */
+	width: 20%;
+} 
+.mytable2 .mybody1 .body-item .b-item p{
+	text-align: center;
+}
+.fa-edit{
+    color:green;
+}
+.fa-trash{
+    color:red;
+}
+
+.mytable2 .mybody1 .body-item .b-item:last-child,
+.mytable2 .mybody1 .body-item .b-item:nth-child(5){
+	/* background-color: aqua; */
+	padding-left: 5%;
+}
+
+.listPage{
+    padding:10px;
+    text-align: center;
+    list-style: none;
+}
+.listPage li{
+    background-color: #ffffffBD;
+    padding:10px;
+    display: inline-block;
+    margin:0 10px;
+    cursor: pointer;
+    border-radius:10px;
+}
+.listPage .active{
+    background-color: #32be8f;
+    color:#fff;
+}
+
+.right-item .forms-item .d{
+    padding-left: 2%;
+    gap:60%;
+}
+.right-item .forms-item  .mythead{
+    gap:17%;
+}
+.right-item .forms-item  .body-item{
+    gap:15%;
+}
