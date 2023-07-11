@@ -18,11 +18,14 @@
 }
 
 .container {
+  opacity: 0;
+  z-index: 0;
   position: relative;
   width: 100%;
   background-color: #fff;
   min-height: 100vh;
   overflow: hidden;
+  transition: 0.8s;
 }
 
 .forms-container {
@@ -45,7 +48,7 @@
   z-index: 5;
 }
 
-form {
+.container form {
   display: flex;
   align-items: center;
   justify-content: center;
