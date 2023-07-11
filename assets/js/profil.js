@@ -223,12 +223,14 @@ frequence_sport.addEventListener('input',()=>{
             div_erreur_frequence.style.display = 'none';
     }else{
         suivant5[0].style.display = 'none';
+        precedent5[0].style.display = 'none';
         check_frequence = 0;
         
         div_erreur_frequence.style.display = 'block';
     }
     if(check_poids_actuel==1){
         suivant5[0].style.display = 'block';
+        precedent5[0].style.display = 'block';
     }
 });
 

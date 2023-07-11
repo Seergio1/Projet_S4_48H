@@ -90,10 +90,12 @@ nav form .search-data{
 	font-size: 16px;
 	
 }
+#btn_modif:hover{
+	transform: scale(1.1);
+}
 nav form button{
 	width: 35px;
 	height: 30px;
-	/* padding: 0 15px; */
 	background:var(--theme-secondaire);
 	border: none;
 	cursor: pointer;
@@ -103,6 +105,25 @@ nav form button{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.facture_nav_item:hover{
+	transform: translateY(-10px);
+}
+.box_IMC{
+	background-color: var(--theme-secondaire);
+	width: 50px;
+	height: 50px;
+	min-width: 30px;
+	min-height: 30px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5%;
+	color: white;
+}
+.box_IMC:hover{
+	cursor: pointer;
 }
 nav .menu-icon,
 nav .search-icon,

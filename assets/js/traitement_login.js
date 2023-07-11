@@ -152,7 +152,7 @@ btn_inscri_front_office.addEventListener('click',()=>{
 		console.log(value_taille);
 		console.log(value_rythme);
 		console.log(value_genre);
-		console.log(tab_restriction_alimentaire);
+		console.log(tab_maladie);
 		console.log(value_poids_ideal);
 		console.log(value_objectif);
 		console.log(value_poids_actuel);

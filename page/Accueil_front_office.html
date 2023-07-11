@@ -7,6 +7,9 @@
     <link rel="stylesheet" type="text/css" href="./../assets/fontawesome-5/css/all.css">
     <link rel="stylesheet" href="../assets/css/Accueil_front_office.css">
     <link rel="stylesheet" href="../assets/css/box_card.css">
+    <link rel="stylesheet" href="../assets/css/box_facture.css">
+    <link rel="stylesheet" href="../assets/css/porte_monnaie.css">
+    <link rel="stylesheet" href="../assets/css/info_user.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,37 +22,134 @@
 		<div class="nav-items">
 				<li><a href="#">Mon régime</a></li>
 				<li><a href="#">Moi</a></li>
-				<li><a href="#">Suivi</a></li>
-                <li><a href="#">Code</a></li>
+
+                <li><a href="#">Porte-monnaie</a></li>
 		</div>
-		<div class="search-icon"><span class="fas fa-search"></span></div>
+		<!-- <div class="search-icon"><span class="fas fa-search"></span></div> -->
 		<div class="cancel-icon"><span class="fas fa-times"></span></div>
-		<form action="#">
+		<!-- <form action="#">
 			<input style="outline: none;" type="search" class="search-data" placeholder="Rechercher" required>
 			<button type="submit" class="fas fa-search"></button>
-		</form>
+		</form> -->
+        <div class="box_IMC">
+            IMC
+        </div>
 	</nav>
     <div class="content">
-        <div class="box_card">
-            <div class="card_item">
-                <div class="card_titre">Régime Spartiate</div>
-                <div class="card_description">
-                    <div class="card_description_titre">Déscription</div>
-                    <div class="card_texte">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet nam exercitationem soluta amet laboriosam eius
-                        molestiae reiciendis temporibus. Aliquid rerum assumenda error repudiandae suscipit? Repellendus, vel optio! Nam, id
-                        necessitatibus?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet nam exercitationem soluta amet laboriosam eius
-                        molestiae reiciendis temporibus. Aliquid rerum assumenda error repudiandae suscipit? Repellendus, vel optio! Nam, id
-                        necessitatibus?
-                    </div>
+        <!-- eto no apetraka ny content hafa -->
+        <div class="box_facture">
+
+            <!-- nav_facture -->
+            <div class="facture_nav_bar">
+                <div class="facture_nav_item">
+                    <i class="fas fa-eye"></i>
                 </div>
-                <div class="box_bouton">
-                    <button id="btn_supp">Modifier</button>
-                    <button id="btn_modif">Voir</button>
+                <div class="facture_nav_item">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+           
+        
+            <!-- facture_content -->
+            <div class="facture_content">
+                <div class="box_facture_info">
+        
+                    <div class="facture_box_1">
+                        <div class="facture_info_item_customer">
+                            <div class="titre_facture_">Sport</div>
+                            <div class="facture_sous_item">
+                                <div class="facture_info_label">Nom : </div>
+                                <div class="facture_info_text">VTT</div>
+                            </div>
+                            <div class="facture_sous_item">
+                                <div class="facture_info_label">Fréquence : </div>
+                                <div class="facture_info_text">2/semaine</div>
+                            </div>
+                        </div>
+        
+                        <div class="facture_info_item_company">
+                            <div class="titre_facture_">Régime</div>
+                            <div class="facture_sous_item">
+                                <div class="facture_info_label">Nom : </div>
+                                <div class="facture_info_text">Mediteranéen</div>
+                            </div>
+                            <div class="facture_sous_item">
+                                <div class="facture_info_label">Calorie : </div>
+                                <div class="facture_info_text">12275 Ka</div>
+                            </div>
+                            <div class="facture_sous_item">
+                                <div class="facture_info_label">Poids/plats : </div>
+                                <div class="facture_info_text">450 gr</div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="facture_box_2">
+                        <div class="table">
+                            <table class="table_facture">
+                                  <caption>Plat(s)</caption>
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Nom plat</th>
+                                      <th scope="col">Poids plat</th>
+                                      <th scope="col">Calorie</th>
+                                    </tr>
+                                  </thead>
+                                  
+                                  <tbody>
+        
+                                    <tr>
+                                      <td data-label="Nom plat">Tsaramaso sy saosisse</td>
+                                      <td data-label="Poids plat">450 gr</td>
+                                      <td data-label="Calorie">1200 kcal</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Nom plat">Hena omby ritra</td>
+                                        <td data-label="Poids plat">450 gr</td>
+                                        <td data-label="Calorie">1500 Kcal</td>
+                                    </tr>
+        
+                                  </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="facture_box_3">
+                        <div class="box_total">
+                            <div class="titre_facture_">Total</div>
+                            <div class="facture_sous_item total">
+                                <div class="facture_info_text">£ 10,000</div>
+                            </div>
+                        </div>
+                        <div class="box_note">
+                            <div class="titre_facture_">Note</div>
+                            <div class="facture_sous_item note">
+                                <div class="facture_info_label">Déscription</div>
+                                <div class="facture_info_text">
+                                    Régime pour mincire
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
                 </div>
             </div>
         </div>
     </div>
+
+     <!-- modal -->
+     <div id="imc_box" class="modal">
+        <div class="modal_imc_content">
+            <span class="close_imc">&times;</span>
+            <h2>Calculez votre IMC</h2>
+            <input type="number" name="" id="taille_imc" placeholder="cm">
+            <input type="number" name="" id="poids_imc" placeholder="kg">
+            <input id="btn_calcul_imc" type="button" value="Calculer">
+            <div class="reponse_imc"></div>
+        </div>
+    </div>
+<!-- fin modal -->
+
+    
     
     
     <!-- footer -->
@@ -61,8 +161,7 @@
                     <ul>
                         <li><a href="#">Mon régime</a></li>
                         <li><a href="#">Moi</a></li>
-                        <li><a href="#">Suivi</a></li>
-                        <li><a href="#">Code</a></li>
+                        <li><a href="#">Porte-monnaie</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -73,15 +172,6 @@
                         <li><a href="#">ANDRAINA Liantsoa ETU001905</a></li>
                     </ul>
                 </div>
-                <!-- <div class="footer-col">
-                    <h4>online shop</h4>
-                    <ul>
-                        <li><a href="#">watch</a></li>
-                        <li><a href="#">bag</a></li>
-                        <li><a href="#">shoes</a></li>
-                        <li><a href="#">dress</a></li>
-                    </ul>
-                </div> -->
                 <div class="footer-col">
                     <h4>follow us</h4>
                     <div class="social-links">
@@ -96,5 +186,7 @@
    </footer>
 
       <script src="../assets/js/accueil_front_office.js"></script>
+      <script src="../assets/js/porte_monnaie.js"></script>
+      <script src="../assets/js/imc.js"></script>
 </body>
 </html>
