@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = "http://sokaiz.epizy.com/";
-$config['base_url'] = 'http://localhost/Projet-finalS4/';
+$config['base_url'] = 'http://www.slije.alwaysdata.net';
 
 /*
 |--------------------------------------------------------------------------

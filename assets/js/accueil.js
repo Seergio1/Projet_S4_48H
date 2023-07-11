@@ -25,15 +25,15 @@ function frame() {
 
 	rubrique_item.forEach((item,index)=>{
 		item.addEventListener('mouseover', ()=>{
-				item.style.background = '#efefef';
-				rubrique_icon[index].style.color = 'rgb(247,112,98)';
-				rubrique_text[index].style.color = 'rgb(247,112,98)';
+				item.style.background = '#ffffff4a';
+				rubrique_icon[index].style.color = 'rgb(145, 127, 187);';
+				rubrique_text[index].style.color = 'rgb(145, 127, 187);';
 		});
 	});
 
 	rubrique_item.forEach((item,index)=>{
 		item.addEventListener('mouseout', ()=>{
-				item.style.background = 'rgb(247,112,98)';
+				item.style.background = 'transparent';
 				rubrique_icon[index].style.color = 'white';
 				rubrique_text[index].style.color = 'white';
 		});
@@ -66,6 +66,7 @@ var right = document.querySelector(".accueil_right");
 		}
 		
 	});
+
 
 
 	

@@ -1,0 +1,331 @@
+.formular5 {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+}
+
+.formular5.active {
+    display: flex;
+}
+
+.formular5.active > .clone-body {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.521);
+    backdrop-filter: blur(5px);
+}
+
+.formular5 > .content > h1 {
+    color: rgb(86, 23, 145);
+}
+
+.formular5.active > .content {
+    display: flex;
+    width: 35%;
+    flex-direction: column;
+    padding: 2% 3%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 1px 6px 1px #6464640d;
+    position: relative;
+    z-index: 1;
+    gap: 25px;
+    transform: translateX(0);
+    opacity: 1;
+    animation: animate1 .5s;
+}
+
+
+
+
+@keyframes animate1 {
+    from {
+        transform: translateX(-5%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.btn_facture_modifier{
+    padding: 2%;
+    background-color: rgb(247,112,98);
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width:1360px){
+	.formular5.active > .content{
+        width: 450px;
+        padding-left: 10%;
+    }
+    .ajout_facture_item input{
+        width: 300px;
+    }
+    textarea{
+        width: 250px;
+    }
+}
+@media screen and (max-width:460px){
+    .formular5.active > .content{
+        padding: 3%;
+        width: 400px;
+    }
+    .ajout_facture_item input{
+        width: 280px;
+    }
+    textarea{
+        width: 200px;
+    }
+    .btn_facture_modifier{
+        margin-right: 50%;
+    }
+    .info_client_facture{
+        
+        padding-inline-start: 10%;
+    }
+}
+
+
+/* formulaire supprimer */
+
+
+
+.formular6 {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+}
+
+.formular6.active {
+    display: flex;
+}
+
+.formular6.active > .clone-body {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.521);
+    backdrop-filter: blur(5px);
+}
+
+.formular6 > .content > h1 {
+    font-size: 17px;
+    color: rgb(80, 74, 73);
+}
+
+.formular6.active > .content {
+    display: flex;
+    width: 25%;flex-direction: column;
+    padding: 2% 3%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 1px 6px 1px #6464640d;
+    position: relative;
+    z-index: 1;
+    gap: 25px;
+    transform: translateX(0);
+    opacity: 1;
+    animation: animate1 .5s;
+}
+
+
+.formular6.active > .content>.choice{
+    display: flex;
+    gap: 30%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.formular6.active .content>.choice >.bouton:nth-child(1)> button{
+    padding: 10px 30px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+}
+.formular6.active .content>.choice >.bouton:nth-child(2)> button{
+    background-color: red;
+    padding: 10px 30px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.formular6.active .content>.choice >.bouton:nth-child(1)> button:hover{
+    background-color: rgba(2, 83, 2, 0.904);
+}
+.formular6.active .content>.choice >.bouton:nth-child(2)> button:hover{
+    background-color: rgba(218, 10, 10, 0.932);
+}
+
+@keyframes animate1 {
+    from {
+        transform: translateX(-5%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fermer{
+    position: relative;
+    top: 2%;
+    left: 96%;
+}
+.fa-times{
+    color: white;
+    background-color: rgb(255 255 255 / 47%);
+    border-radius: 50%;
+    padding: 1%;
+}
+
+
+
+
+
+.formular7 {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+}
+
+.formular7.active {
+    display: flex;
+}
+
+.formular7.active > .clone-body {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.521);
+    backdrop-filter: blur(5px);
+}
+
+.formular7 > .content > h1 {
+    font-size: 17px;
+    color: rgb(80, 74, 73);
+}
+
+.formular7.active > .content {
+    display: flex;
+    /* width: 30%; */
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    padding: 2% 3%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 1px 6px 1px #6464640d;
+    /* position: relative; */
+    z-index: 1;
+    gap: 25px;
+    transform: translateX(0);
+    opacity: 1;
+    animation: animate1 .5s;
+    
+}
+
+.choix_3,
+.choix_2,
+.choix_1{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.choix_3 .one-plat,
+.choix_2 .one-plat,
+.choix_1 .one-plat{
+    width:80%;
+    display: flex;
+    gap: 3%;
+    margin-bottom:3%;
+    padding:2% 5%;
+}
+
+.formular7.active > .content>.choice{
+    display: flex;
+    gap: 5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height:180px;
+    overflow-y:scroll;
+    width:100%;
+}
+
+.formular7.active > .content>.choice>.one-plat{
+    width:80%;
+    display: flex;
+    gap: 3%;
+    margin-bottom:3%;
+    padding:2% 5%;
+}
+/* formulaire plats */
+.box_repas{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+}
+#btn_plat2,
+#btn_plat3,
+#btn_plat1{
+    width:50%;
+    padding:2% 5%;
+    background-color:white;
+    border:2px solid rgb(247,112,98);
+    color:rgb(247,112,98);
+    border-radius:10px;
+    transition:0.4s ease;
+}
+#btn_plat2:hover,
+#btn_plat3:hover,
+#btn_plat:hover{
+    background-color:rgb(247,112,98);
+    color:white;
+}
+.menu_repas{
+    width:100%;
+    display:flex;
+}
+.menu_item{
+    padding:8px 20px;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+    background-color:rgb(247,112,98);
+    width:33.33%;
+    color:white;
+    margin:0.5%;
+
+    
+}
+.menu_item:hover{
+    cursor:pointer;
+    transform:scale(1.1);
+}

@@ -74,16 +74,22 @@ function getGenre_value(){
     }
 }
 function getAlimentation_value(){
+    console.log("taille: "+tab_restriction_alimentaire.length);
     for (let index = 0; index < restriction_alimentaire.length; index++) {
         if(restriction_alimentaire[index].style.border=="1px solid red"){
-            tab_restriction_alimentaire.push(restriction_alimentaire[index].getAttribute("value")); 
+            // console.log("bonjour");
+            if(index!=restriction_alimentaire.length-1){
+                tab_restriction_alimentaire.push(restriction_alimentaire[index].getAttribute("value")); 
+            }
         }
     }
 }
 function getMaladie_value(){
     for (let index = 0; index < maladie.length; index++) {
         if(maladie[index].style.border=="1px solid red"){
-            tab_maladie.push(maladie[index].getAttribute("value")); 
+            if(index!=maladie.length-1){
+                tab_maladie.push(maladie[index].getAttribute("value")); 
+            }
         }
     }
 }
@@ -205,12 +211,12 @@ poids_ideal.addEventListener('input',()=>{
         div_erreur_poids_ideal.style.display = 'block';
     }
     if(check_poids_ideal+check_rythme==2){
-        getObject_value();
-        getGenre_value();
-        getAlimentation_value();
-        getMaladie_value();
-        getNbrRepas_value();
-        getArgent_value();
+        // getObject_value();
+        // getGenre_value();
+        // getAlimentation_value();
+        // getMaladie_value();
+        // getNbrRepas_value();
+        // getArgent_value();
         suivant8[0].style.display = 'block';
     }
 });
@@ -223,12 +229,14 @@ frequence_sport.addEventListener('input',()=>{
             div_erreur_frequence.style.display = 'none';
     }else{
         suivant5[0].style.display = 'none';
+        precedent5[0].style.display = 'none';
         check_frequence = 0;
         
         div_erreur_frequence.style.display = 'block';
     }
     if(check_poids_actuel==1){
         suivant5[0].style.display = 'block';
+        precedent5[0].style.display = 'block';
     }
 });
 
@@ -392,8 +400,10 @@ function getDataNbrRepas(){
     });
 }
 var check_alimentaire = 0;
+var aucun = document.querySelector('.aucun');
 function getDataAlimentaire(){
     restriction_alimentaire = document.querySelectorAll('.e3 .etape_item');
+    console.log("restriction : "+restriction_alimentaire.length);
     restriction_alimentaire.forEach((element,i) => {
         element.addEventListener('click',()=>{
             let suivant3 = document.getElementsByName('suivant3');
@@ -401,13 +411,13 @@ function getDataAlimentaire(){
             suivant3[0].style.display='block';
             precedent3[0].style.display = 'block';
             check_alimentaire = 1;
-            if(element.getAttribute('value')=='5'){//aucune
+            if(element.getAttribute('value')==aucun.getAttribute("value")){//aucune
                 restriction_alimentaire[restriction_alimentaire.length-1].style.border = 'red';
                 for (let index = 0; index < restriction_alimentaire.length-1; index++) {
                     restriction_alimentaire[index].style.border = 'none';
                 }
             }else{
-                restriction_alimentaire[4].style.border = 'none';
+                restriction_alimentaire[restriction_alimentaire.length-1].style.border = 'none';
             }
             if(element.style.border == '1px solid red'){
                 element.style.border='none';
@@ -424,9 +434,11 @@ function getDataAlimentaire(){
     });
 }
 var check_maladie = 0;
+var aucun2 = document.querySelector('.aucun2');
 function getDataMaladie(){
 
     maladie = document.querySelectorAll('.e4 .etape_item');
+    console.log("maladie: "+maladie.length);
     maladie.forEach((element,i) => {
         element.addEventListener('click',()=>{
             let suivant4 = document.getElementsByName('suivant4');
@@ -434,7 +446,7 @@ function getDataMaladie(){
             suivant4[0].style.display='block';
             precedent4[0].style.display = 'block';
             check_maladie = 1;
-            if(element.getAttribute('value')=='5'){//aucune
+            if(element.getAttribute('value')==aucun2.getAttribute("value")){//aucune
                 maladie[maladie.length-1].style.border = 'red';
                 for (let index = 0; index < maladie.length-1; index++) {
                     maladie[index].style.border = 'none';
